@@ -68,17 +68,12 @@ def TestAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_v
 	knn = KNeighborsClassifier(n_neighbors=15)
 	knn.fit(train_dataset,TrainTrain_Data.ravel())
 	pred = knn.predict(test_dataset)
-	print('pred.shape: ', pred.shape)
-	print('test_labels.shape: ', test_labels.shape)
-	print('testcarlocs.shape: ', testcarlocs.shape)
-	print('pred: ', pred)
-	print (accuracy_score(test_labels,pred) * 100, '%')
+	print (accuracy_score(valid_labels,pred) * 100, '%')
 	np.savetxt('pred.txt', pred, delimiter=',')
 
 	for x in range (pred.size):
 		
 		if (pred[x] > 0):
-			print("I found car at")
 			print(testcarlocs[x])
 			u_valid = np.append(u_valid, testcarlocs[x][0])
 			v_valid = np.append(v_valid, testcarlocs[x][1])
@@ -99,10 +94,10 @@ def TestAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_v
 	# Now, loop through coord arrays, and create a circle at each x,y pair
 	for xx, yy in zip(u_valid, v_valid):
 
-		print('xx: ', xx)
-		print('xx-2850: ', int(xx-2850))
-		print('yy: ', yy)
-		print('yy-1500: ', int(yy-1500))
+		#print('xx: ', xx)
+		# print('xx-2850: ', int(xx-2850))
+		# print('yy: ', yy)
+		# print('yy-1500: ', int(yy-1500))
 		circ = Circle((int(xx-2850), int(yy-1500)),5)
 		circ.set_facecolor('r')
 		ax.add_patch(circ)

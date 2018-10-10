@@ -156,10 +156,10 @@ def ValidAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_
 	# Now, loop through coord arrays, and create a circle at each x,y pair
 	for xx, yy in zip(u_valid, v_valid):
 
-		print('xx: ', xx)
-		print('xx-3500: ', int(xx-3800))
-		print('yy: ', yy)
-		print('yy-1900: ', int(yy-1900))
+		#print('xx: ', xx)
+		#print('xx-3500: ', int(xx-3800))
+		#print('yy: ', yy)
+		#print('yy-1900: ', int(yy-1900))
 		circ = Circle((int(xx-3800), int(yy-1900)),5)
 		circ.set_facecolor('r')
 		ax.add_patch(circ)
