@@ -121,6 +121,7 @@ def ValidationDataGeneration(valid):
 
 	return valid_dataset, valid_locations, valid_labels, validcarlocs, u_valid, v_valid
 
+
 def ValidAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_valid, v_valid, validcarlocs):
 
 	TrainTrain_Data = np.delete(TrainTrain_Data, 0, axis=0)

@@ -16,6 +16,7 @@ data = np.load('data_train.npy')
 test=np.load('data_test.npy')
 truth=np.load('ground_truth.npy')
 
+
 valid=data[1900:2100,3500:4200]
 train_data=data[900:1050, 4700:5000]
 test_data = test[1500:1800, 2850:3550]
