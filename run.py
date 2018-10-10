@@ -9,7 +9,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from matplotlib.patches import Circle
 from train import CheckAccuracy, TrainDataGeneration, ValidationDataGeneration, ValidAndPlot
-from test import TestDataGeneration, TrainAndPlot
+from test import TestDataGeneration, TestAndPlot
 
 
 data = np.load('data_train.npy')
@@ -31,7 +31,7 @@ test_dataset, test_locations, test_labels, testcarlocs = TestDataGeneration(test
 val0 = ValidAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_valid, v_valid, validcarlocs)
 
 #for plotting training data
-val1 = TrainAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_valid, v_valid, validcarlocs)
+val1 = TestAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_valid, v_valid, validcarlocs)
 
 print(train_truth_value)
 print(valid_truth_value)
