@@ -9,7 +9,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from matplotlib.patches import Circle
 from train import CheckAccuracy, TrainDataGeneration, ValidationDataGeneration, ValidAndPlot
-from test import TestDataGeneration, TestAndPlot
+from test import TestDataGeneration, TrainAndPlot
 
 
 data = np.load('data_train.npy')
