@@ -7,3 +7,5 @@ For now, the data sets have been cropped as follows -
 	train_data=data[900:1050, 4700:5000]
 	test_data = test[1500:1800, 2850:3550]
 	
+Once the script completes running, it generates txt files describing the location of the 
+red cars in the presented image (in terms of x,y co-ordinate).

@@ -24,7 +24,7 @@ testcarlocs=np.zeros(2)
 
 imgplot = plt.imshow(train_data)
 plt.title('training data')
-plt.show()
+#plt.show()
 
 def CheckAccuracy(truth):
 	
@@ -145,7 +145,7 @@ def ValidAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_
 			v_valid = np.append(v_valid, validcarlocs[x][1])
 			car_locations=np.append(car_locations,validcarlocs[x])
 
-	np.savetxt('validtestcarlocation.txt', car_locations, delimiter=',')
+	np.savetxt('validlocation.txt', car_locations, delimiter=',')
 
 	#validation image:
 	img = plt.imshow(valid)
@@ -166,7 +166,7 @@ def ValidAndPlot(train_dataset, TrainTrain_Data, valid_dataset, valid_labels, u_
 
 	# Show the image
 	plt.title('marked validation image image')
-	plt.show()
+	#plt.show()
 
 	return 0
 
